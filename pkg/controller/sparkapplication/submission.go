@@ -140,6 +140,10 @@ func buildSubmissionCommandArgs(app *v1alpha1.SparkApplication) ([]string, error
 	}
 	args = append(args, "--conf", config.GetDriverAnnotationOption(config.OwnerReferenceAnnotation, referenceStr))
 
+
+  	//todo: remove me
+  	args = append(args, "--conf", fmt.Sprintf("spark.jars.ivy=%s", "/tmp/.ivy2"))
+
 	if app.Spec.MainApplicationFile != nil {
 		// Add the main application file if it is present.
 		args = append(args, *app.Spec.MainApplicationFile)
