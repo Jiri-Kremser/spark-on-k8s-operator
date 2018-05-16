@@ -75,10 +75,10 @@ func main() {
 		glog.Fatal(err)
 	}
 
-	glog.Info("Checking the kube-dns add-on")
-	if err = checkKubeDNS(kubeClient); err != nil {
-		glog.Fatal(err)
-	}
+	// glog.Info("Checking the kube-dns add-on")
+	// if err = checkKubeDNS(kubeClient); err != nil {
+	// 	glog.Fatal(err)
+	// }
 
 	glog.Info("Starting the Spark operator")
 
